@@ -14,8 +14,32 @@ public class Persona {
     private String direccion;
     private String telefono;
     private String email;
+    private String rol;
+    private String claves;
+    private String genero;
+    private String seguroMedico;
+    private String nivel;
+    private String categoria;
 
-    // ... constructores y getters/setters ...
+        public Persona(String identificacion){
+        String cadenaSQL= "select nombres, apellidos, fechaDeNacimiento, direccion, telefono, email from persona "
+                + "where identificacion ="+identificacion+"";
+        ResultSet resultado=ConectorBD.consultar(cadenaSQL);
+        
+        try {
+            if (resultado.next()) {
+                this.identificacion=identificacion;
+                nombres=resultado.getString("nombres");
+                apellidos=resultado.getString("apellidos");
+                fechaDeNacimiento=resultado.getString("fechaDeNacimiento");
+                direccion=resultado.getString("direccion");
+                telefono=resultado.getString("telefono");
+                email=resultado.getString("email");
+                
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Persona.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     public boolean grabar() {
         String cadenaSQL = "INSERT INTO persona (identificacion, nombres, apellidos, fechaDeNacimiento, direccion, telefono, email) " +
