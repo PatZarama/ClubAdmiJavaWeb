@@ -9,6 +9,6 @@ package clases;
  *
  * @author Johan Guaquez
  */
-public class CategoriaDeJuego {
+public class prueba {
     
 }
