@@ -75,6 +75,11 @@ public class Pago {
     public void setIdentificacionAlumno(String identificacionAlumno) {
         this.identificacionAlumno = identificacionAlumno;
     }
+
+    @Override
+    public String toString() {
+        return "Pago{" + '}';
+    }
         
     public boolean grabar(){
         String cadenaSQL="insert into Pago (fechaPago, monto, estado, identificacionAlumno) values ('"
