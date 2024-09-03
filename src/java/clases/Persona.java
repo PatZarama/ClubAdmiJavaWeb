@@ -136,9 +136,8 @@ public class Persona {
     }
 
     public boolean grabar() {
-        String cadenaSQL = "INSERT INTO persona (identificacion, nombres, apellidos, fechaDeNacimiento, direccion, telefono, email) "
+        String cadenaSQL = "INSERT INTO persona (nombres, apellidos, fechaDeNacimiento, direccion, telefono, email) "
                 + "VALUES ('" 
-                + identificacion + "', '" 
                 + nombres + "', '" 
                 + apellidos + "', '" 
                 + fechaDeNacimiento + "', '" 
@@ -149,8 +148,7 @@ public class Persona {
     }
 
     public boolean modificar(String identificacionAnterior) {
-        String cadenaSQL = "UPDATE persona SET identificacion='"+identificacion
-                + "' ,nombres='" + nombres 
+        String cadenaSQL = "UPDATE persona SET nombres='" + nombres 
                 + "', apellidos='" + apellidos 
                 + "', fechaDeNacimiento='" + fechaDeNacimiento 
                 + "', direccion='" + direccion 
