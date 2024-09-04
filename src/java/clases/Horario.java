@@ -10,5 +10,5 @@ package clases;
  * @author Johan Guaquez
  */
 public class Horario {
-    
+   
 }
