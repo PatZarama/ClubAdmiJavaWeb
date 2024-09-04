@@ -140,9 +140,12 @@ public class Horario {
               while(datos.next()){
                   Horario horario=new Horario();
                   horario.setId(datos.getString("id"));
-                  horario.setNombreCategoria(datos.getString("nombreCategoria"));
-                  horario.setNumeroJugadores(datos.getString("numeroJugadores"));
-                  horario.setTipoCancha(datos.getString("tipoCancha"));
+                  horario.setDia(datos.getString("dia"));
+                  horario.setHoraFinal(datos.getString("horaFinal"));
+                  horario.setIdCategoriaPorEdad(datos.getString("idCategoriaPorEdad"));
+                  horario.setIdCategoriaJuego(datos.getString("idCategoriaJuego"));
+                  horario.setIdTipoCancha(datos.getString("idTipoCancha"));
+                  horario.setIdEntrenador(datos.getString("idEntrenador"));
                   lista.add(horario);
               }
           } catch (SQLException ex) {
@@ -158,4 +161,4 @@ public class Horario {
 
     
     
-}
+

@@ -10,5 +10,10 @@ package clases;
  * @author Johan Guaquez
  */
 public class TipoCancha {
+    private String id;
+    private String nombre;
+    private String jugadores;
+    private String descripcion;
+    private String idCategoriaJuego;
     
 }
