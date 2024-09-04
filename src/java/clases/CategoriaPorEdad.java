@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package clases;
 
 
@@ -15,16 +10,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-/**
- *
- * @author Johan Guaquez
- */
 public class CategoriaPorEdad {
     private String id;
     private String nombre;
     private String edadInicial;
     private String edadLimite;
-    
+
     public CategoriaPorEdad() {
     }
 
@@ -42,8 +33,7 @@ public class CategoriaPorEdad {
             Logger.getLogger(CategoriaPorEdad.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    
+
 
     public String getId() {
         return id;
@@ -80,7 +70,7 @@ public class CategoriaPorEdad {
     public String toString(){
         return  nombre;
     }
-    
+
      public boolean grabar (){
         String cadenaSQL = "insert into CategoriaPorEdad (nombre, edadInicial, edadLimite) values ('"+nombre+"','"+edadInicial+"','"+edadLimite+"')";
         return ConectorBD.ejecutarQuery(cadenaSQL);
@@ -121,3 +111,4 @@ public class CategoriaPorEdad {
       return lista;
     }
 }
+

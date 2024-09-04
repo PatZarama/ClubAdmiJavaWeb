@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package clases;
 
 
@@ -15,11 +10,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-
-/**
- *
- * @author Johan Guaquez
- */
 public class CategoriaDeJuego {
 
     private String id;
@@ -29,7 +19,7 @@ public class CategoriaDeJuego {
 
     public CategoriaDeJuego() {
     }
-    
+
     public CategoriaDeJuego(String id) {
         String cadenaSQL="select nombreCategoria, numeroJugadores, tipoCancha from CategoriaDeJuego where id="+id;
         ResultSet resultado = ConectorBD.consultar(cadenaSQL);
@@ -76,7 +66,7 @@ public class CategoriaDeJuego {
     public void setTipoCancha(String tipoCancha) {
         this.tipoCancha = tipoCancha;
     }
-    
+
     public boolean grabar (){
         String cadenaSQL = "insert into CategoriaDeJuego (nombreCategoria, numeroJugadores, tipoCancha) values ('"+nombreCategoria+"','"+numeroJugadores+"','"+tipoCancha+"')";
         return ConectorBD.ejecutarQuery(cadenaSQL);
@@ -117,6 +107,4 @@ public class CategoriaDeJuego {
       return lista;
     }
 }
-
-    
 
