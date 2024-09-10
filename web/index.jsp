@@ -1,10 +1,4 @@
 <%-- 
-    Document   : index
-    Created on : 5/09/2024, 07:17:17 AM
-    Author     : Johan Guaquez
---%>
-
-<%-- 
     Document   : categoriasFormulario
     Created on : 30/04/2024, 11:05:30 AM
     Author     : Johan guaquez
